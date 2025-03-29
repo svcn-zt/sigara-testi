@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigaraya Bağlılık Testi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sigaraya Bağlılık Testi</h1>
+        <p>Bu test sigara bağımlılığınızı anlamanıza yardımcı olacaktır. Lütfen soruları dikkatlice yanıtlayın.</p>
+        <form>
+            <label for="q1">1. Günde kaç sigara içiyorsunuz?</label>
+            <select id="q1">
+                <option value="0">Hiç içmiyorum</option>
+                <option value="1">1-10</option>
+                <option value="2">11-20</option>
+                <option value="3">21 ve üzeri</option>
+            </select>
+
+            <label for="q2">2. Sabah uyandığınızda ilk 30 dakika içinde sigara içiyor musunuz?</label>
+            <select id="q2">
+                <option value="0">Hayır</option>
+                <option value="1">Evet</option>
+            </select>
+
+            <label for="q3">3. Sigara içmediğinizde sinirli veya huzursuz hissediyor musunuz?</label>
+            <select id="q3">
+                <option value="0">Hayır</option>
+                <option value="1">Evet</option>
+            </select>
+
+            <!-- Diğer sorular burada devam eder... -->
+        </form>
+    </div>
+</body>
+</html>
