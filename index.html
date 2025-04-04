@@ -8,14 +8,16 @@
         body {
             font-family: "Times New Roman", serif;
             margin: 20px;
+            background-color: #000; /* Arka plan siyah */
+            color: #fff; /* Yazılar beyaz */
         }
         .container {
             max-width: 600px;
             margin: auto;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #555;
             border-radius: 10px;
-            background-color: #f9f9f9;
+            background-color: #111; /* Koyu kutu rengi */
             text-align: left;
         }
         .question {
@@ -26,6 +28,19 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        h2, p, label {
+            color: #fff;
         }
     </style>
 </head>
@@ -105,4 +120,3 @@
     </script>
 </body>
 </html>
-
