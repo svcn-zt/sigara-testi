@@ -4,40 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigara Bağımlılık Testi</title>
-    <!-- Google Fonts'tan Oxygen fontu ekliyoruz -->
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
     <style>
-        /* Genel Sayfa Stilini Düzenliyoruz */
         body {
-            font-family: 'Oxygen', sans-serif; /* Oxygen fontunu kullanıyoruz */
-            background-color: #000000; /* Arka plan rengi siyah */
-            color: white; /* Yazı rengi beyaz */
+            font-family: "Times New Roman", serif;
             margin: 0;
+            background-color: #000000; /* Arka plan siyah */
+            color: #ffffff; /* Yazı rengi beyaz */
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Sayfanın üst kısmına hizalamayı sağlıyoruz */
-            height: 100vh;
-            overflow-y: scroll; /* Sayfa kaydırma çubuğu görünür olmalı */
-            box-sizing: border-box;
+            overflow-x: hidden; /* Yatay kaydırmayı engelle */
         }
 
-        /* Sayfa Container'ı ve İçeriği Düzenliyoruz */
         .container {
             max-width: 600px;
-            width: 100%;
+            margin: 0 auto;
             padding: 20px;
-            margin-top: 20px;
             text-align: left;
-            box-sizing: border-box;
-        }
-
-        h2, p {
-            text-align: center;
-        }
-
-        ol {
-            padding-left: 20px;
+            display: block;
         }
 
         .question {
@@ -49,30 +31,21 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #444444; /* Buton arka plan rengi */
-            color: white;
+            background-color: #4CAF50; /* Buton rengi yeşil */
             border: none;
-            border-radius: 5px;
+            color: white;
         }
 
-        button:hover {
-            background-color: #555555; /* Buton hover efekti */
+        /* Sayfa kaydırma için ayar */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow-y: auto; /* Dikey kaydırmayı aktif et */
         }
-
-        /* Mobil cihazlara uyumlu stil */
-        @media (max-width: 600px) {
-            body {
-                height: auto;
-                padding: 10px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            button {
-                width: 100%;
-            }
+        
+        .content {
+            height: 100%; /* Sayfa içeriği %100 yüksekliğe sahip olacak şekilde */
+            display: block;
         }
     </style>
 </head>
@@ -82,47 +55,45 @@
         <p>Bu test sigara bağımlılığınızı ölçmek için hazırlanmıştır. Soruları dikkatlice cevaplayın.</p>
         
         <form id="testForm">
-            <ol>
-                <li class="question">
-                    <label>Uyandıktan ne kadar sonra ilk sigaranızı içiyorsunuz?</label><br>
-                    <input type="radio" name="q1" value="3"> İlk 5 dakika içinde<br>
-                    <input type="radio" name="q1" value="2"> 6-30 dakika içinde<br>
-                    <input type="radio" name="q1" value="1"> 31-60 dakika içinde<br>
-                    <input type="radio" name="q1" value="0"> 60 dakikadan sonra
-                </li>
-                
-                <li class="question">
-                    <label>Sigara içmenin yasak olduğu yerlerde, sigara içmemek zor geliyor mu?</label><br>
-                    <input type="radio" name="q2" value="1"> Evet<br>
-                    <input type="radio" name="q2" value="0"> Hayır
-                </li>
-                
-                <li class="question">
-                    <label>Hangi sigarayı bırakmak sizin için daha zor?</label><br>
-                    <input type="radio" name="q3" value="1"> Sabah ilk sigaram<br>
-                    <input type="radio" name="q3" value="0"> Diğerleri
-                </li>
-                
-                <li class="question">
-                    <label>Her gün ortalama kaç adet sigara içiyorsunuz?</label><br>
-                    <input type="radio" name="q4" value="0"> 10 veya daha az<br>
-                    <input type="radio" name="q4" value="1"> 11-20<br>
-                    <input type="radio" name="q4" value="2"> 21-30<br>
-                    <input type="radio" name="q4" value="3"> 31 ve üzeri
-                </li>
-                
-                <li class="question">
-                    <label>Uyandığınız ilk saat içinde, günün diğer saatlerinden daha fazla sigara içiyor musunuz?</label><br>
-                    <input type="radio" name="q5" value="1"> Evet<br>
-                    <input type="radio" name="q5" value="0"> Hayır
-                </li>
-                
-                <li class="question">
-                    <label>Hasta olduğunuz günlerde bile sigara içiyor musunuz?</label><br>
-                    <input type="radio" name="q6" value="1"> Evet<br>
-                    <input type="radio" name="q6" value="0"> Hayır
-                </li>
-            </ol>
+            <div class="question">
+                <label>Uyandıktan ne kadar sonra ilk sigaranızı içiyorsunuz?</label><br>
+                <input type="radio" name="q1" value="3"> İlk 5 dakika içinde<br>
+                <input type="radio" name="q1" value="2"> 6-30 dakika içinde<br>
+                <input type="radio" name="q1" value="1"> 31-60 dakika içinde<br>
+                <input type="radio" name="q1" value="0"> 60 dakikadan sonra
+            </div>
+            
+            <div class="question">
+                <label>Sigara içmenin yasak olduğu yerlerde, sigara içmemek zor geliyor mu?</label><br>
+                <input type="radio" name="q2" value="1"> Evet<br>
+                <input type="radio" name="q2" value="0"> Hayır
+            </div>
+            
+            <div class="question">
+                <label>Hangi sigarayı bırakmak sizin için daha zor?</label><br>
+                <input type="radio" name="q3" value="1"> Sabah ilk sigaram<br>
+                <input type="radio" name="q3" value="0"> Diğerleri
+            </div>
+            
+            <div class="question">
+                <label>Her gün ortalama kaç adet sigara içiyorsunuz?</label><br>
+                <input type="radio" name="q4" value="0"> 10 veya daha az<br>
+                <input type="radio" name="q4" value="1"> 11-20<br>
+                <input type="radio" name="q4" value="2"> 21-30<br>
+                <input type="radio" name="q4" value="3"> 31 ve üzeri
+            </div>
+            
+            <div class="question">
+                <label>Uyandığınız ilk saat içinde, günün diğer saatlerinden daha fazla sigara içiyor musunuz?</label><br>
+                <input type="radio" name="q5" value="1"> Evet<br>
+                <input type="radio" name="q5" value="0"> Hayır
+            </div>
+            
+            <div class="question">
+                <label>Hasta olduğunuz günlerde bile sigara içiyor musunuz?</label><br>
+                <input type="radio" name="q6" value="1"> Evet<br>
+                <input type="radio" name="q6" value="0"> Hayır
+            </div>
             
             <button type="button" onclick="calculateScore()">Sonucu Gör</button>
         </form>
@@ -154,7 +125,6 @@
     </script>
 </body>
 </html>
-
 
 
 
